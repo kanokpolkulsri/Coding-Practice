@@ -13,7 +13,6 @@ var romanToInt = function(s) {
         'M': 1000,
     };
     let count = 0;
-    let palm = '';
     let skip = -1;
     for(let i=0; i<s.length; i++) {
         if(i == skip) {
@@ -24,8 +23,6 @@ var romanToInt = function(s) {
         } else {
             count += romans[s[i]];
         }
-        palm += s[i];
-        console.log(palm, count);
     }
     return count;
 };
